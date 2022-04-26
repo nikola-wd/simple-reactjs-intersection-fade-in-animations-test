@@ -11,8 +11,11 @@ const Observable = (props) => {
     trOffset = '30px',
     trDelay = '0s',
     trDuration = '0.4s',
+    as = Fragment,
   } = props;
   const helperRef = useRef(children);
+
+  const Wrapper = as;
 
   useEffect(() => {
     if (children && helperRef?.current) {
@@ -32,7 +35,7 @@ const Observable = (props) => {
   return (
     <Fragment>
       <span ref={helperRef} style={{ display: 'none', position: 'absolute' }} />
-      {children}
+      <Wrapper>{children}</Wrapper>
     </Fragment>
   );
 };

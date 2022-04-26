@@ -5,7 +5,7 @@ import Observable from './components/Observable';
 export default function App() {
   return (
     <div>
-      <Observable mode="btm" inOut>
+      <Observable mode="btm" inOut as="div">
         <h1>Hello StackBlitz!</h1>
       </Observable>
       <p>Start editing to see some magic happen :)</p>
