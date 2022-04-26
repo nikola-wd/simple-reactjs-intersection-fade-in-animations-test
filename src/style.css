@@ -39,3 +39,23 @@ p {
   transform: translateX(0);
   opacity: 1;
 }
+
+/* test custom */
+.custom-animation {
+  display: inline-flex;
+  transform-origin: center;
+  color: orange;
+}
+.custom-animation.inView {
+  color: green;
+  animation: yo 0.2s forwards;
+}
+
+@keyframes yo {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

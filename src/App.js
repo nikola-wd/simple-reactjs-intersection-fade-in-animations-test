@@ -27,8 +27,10 @@ export default function App() {
       <p>Start editing to see some magic happen :)</p>
       <p>Start editing to see some magic happen :)</p>
       <p>Start editing to see some magic happen :)</p>
-      <Observable mode="btm" inOut>
-        <p>animated: Start editing to see some magic happen :)</p>
+      <Observable mode="custom" inOut>
+        <p className="custom-animation">
+          animated: Start editing to see some magic happen :)
+        </p>
       </Observable>
       <p>Start editing to see some magic happen :)</p>
       <p>Start editing to see some magic happen :)</p>
