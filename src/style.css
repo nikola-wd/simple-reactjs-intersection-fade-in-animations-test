@@ -4,43 +4,38 @@ p {
 }
 
 .ivtr {
-  --offset: 30px;
-  --delay: 0s;
-  --duration: 0.4s;
+  transition: transform var(--ivtr-duration) ease-in-out var(--ivtr-delay),
+    opacity var(--ivtr-duration) ease-in-out var(--ivtr-delay);
+}
+
+.ivtr:not(.ivtr--custom) {
   opacity: 0;
-  transition: transform var(--duration) ease-in-out var(--delay),
-    opacity var(--duration) ease-in-out var(--delay);
 }
 
-.ivtr.ivtr--btm {
-  transform: translateY(var(--offset));
+.ivtr:not(.ivtr--custom).ivtr--btm {
+  transform: translateY(var(--ivtr-offset));
 }
 
-.ivtr.ivtr--top {
-  transform: translateY(calc(var(--offset) * -1));
+.ivtr:not(.ivtr--custom).ivtr--top {
+  transform: translateY(calc(var(--ivtr-offset) * -1));
 }
 
-.ivtr.ivtr--left {
-  transform: translateX(calc(var(--offset) * -1));
+.ivtr:not(.ivtr--custom).ivtr--left {
+  transform: translateX(calc(var(--ivtr-offset) * -1));
 }
 
-.ivtr.ivtr--right {
-  transform: translateX(var(--offset));
+.ivtr:not(.ivtr--custom).ivtr--right {
+  transform: translateX(var(--ivtr-offset));
 }
 
-.ivtr.ivtr--btm.inView,
-.ivtr.ivtr--top.inView {
-  transform: translateY(0) !important;
-  opacity: 1 !important;
+.ivtr:not(.ivtr--custom).ivtr--btm.inView,
+.ivtr:not(.ivtr--custom).ivtr--top.inView {
+  transform: translateY(0);
+  opacity: 1;
 }
 
-.ivtr.ivtr--left.inView,
-.ivtr.ivtr--right.inView {
-  transform: translateX(0) !important;
-  opacity: 1 !important;
-}
-
-.ivtr.ivtr--custom {
-  opacity: 1 !important;
-  transform: none !important;
+.ivtr:not(.ivtr--custom).ivtr--left.inView,
+.ivtr:not(.ivtr--custom).ivtr--right.inView {
+  transform: translateX(0);
+  opacity: 1;
 }

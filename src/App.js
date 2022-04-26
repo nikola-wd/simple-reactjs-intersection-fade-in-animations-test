@@ -42,6 +42,15 @@ export default function App() {
         </p>
       </Observable>
       <p>Start editing to see some magic happen :)</p>
+      <Observable mode="top" inOut>
+        <p>top: Start editing to see some magic happen :)</p>
+      </Observable>
+      <Observable mode="left" inOut trDelay="0.5s" trOffset="100px">
+        <p>left: Start editing to see some magic happen :)</p>
+      </Observable>
+      <Observable mode="right" inOut>
+        <p>right: Start editing to see some magic happen :)</p>
+      </Observable>
     </div>
   );
 }
