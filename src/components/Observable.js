@@ -2,7 +2,13 @@ import React, { useEffect, Fragment, useRef } from 'react';
 import { IntersectionTransitions } from '../classes/IntersectionTransitions';
 
 const Observable = (props) => {
-  const { children, mode = false, inOut = false } = props;
+  const {
+    children,
+    mode = false,
+    inOut = false,
+    rootMargin = '80px 0px 0px 0px',
+    treshold = 0.35,
+  } = props;
   const helperRef = useRef(children);
 
   useEffect(() => {
@@ -12,7 +18,7 @@ const Observable = (props) => {
       el.classList.add('ivtr');
       if (mode) el.classList.add(`ivtr--${mode}`);
       if (inOut) el.classList.add('ivtr--in-out');
-      new IntersectionTransitions(el);
+      new IntersectionTransitions({ el, rootMargin, treshold });
     }
   }, [children, helperRef]);
 

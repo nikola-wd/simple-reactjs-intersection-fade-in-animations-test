@@ -30,8 +30,10 @@ export default function App() {
       <p>Start editing to see some magic happen :)</p>
       <p>Start editing to see some magic happen :)</p>
       <p>Start editing to see some magic happen :)</p>
-      <Observable mode="left" inOut>
-        <p>animated: Start editing to see some magic happen :)</p>
+      <Observable mode="left" inOut treshold={0.05}>
+        <p style={{ height: '150vh', boxShadow: '0 0 0 1px red' }}>
+          animated: Start editing to see some magic happen :)
+        </p>
       </Observable>
       <p>Start editing to see some magic happen :)</p>
     </div>

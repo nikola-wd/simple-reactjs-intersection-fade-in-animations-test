@@ -1,7 +1,7 @@
 class IntersectionTransitions {
-  constructor(el) {
-    this.threshold = 0.35;
-    this.rootMargin = '80px 0px 0px 0px';
+  constructor({ el, rootMargin, threshold }) {
+    this.threshold = threshold;
+    this.rootMargin = rootMargin;
     this.selectorToObserve = el;
     this.classInView = 'inView';
     this.observeIntersections = this.observeIntersections.bind(this);
